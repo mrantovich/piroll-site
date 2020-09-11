@@ -180,6 +180,7 @@ header {
   width: 40px;
   height: 2px;
   background-color: #191919;
+  transition: 0.2s;
 }
 
 .burger span::before,
@@ -190,6 +191,7 @@ header {
   width: 40px;
   height: 2px;
   background-color: #191919;
+  transition: 0.2s;
 }
 
 .burger span::before {
@@ -198,6 +200,20 @@ header {
 
 .burger span::after {
   top: calc(50% + 8px);
+}
+
+.burger._active span {
+  width: 0;
+}
+
+.burger._active span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.burger._active span::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 .main {

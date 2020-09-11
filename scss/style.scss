@@ -106,6 +106,7 @@ header {
 		width: 40px;
 		height: 2px;
 		background-color: #191919;
+		transition: 0.2s;
 	}
 	& span::before,
 	& span::after {
@@ -115,12 +116,25 @@ header {
 		width: 40px;
 		height: 2px;
 		background-color: #191919;
+		transition: 0.2s;
 	}
 	& span::before {
 		top: calc(50% - 10px);
 	}
 	& span::after {
 		top: calc(50% + 8px);
+	}
+
+	&._active span {
+		width: 0;
+		&::before {
+			transform: rotate(45deg);
+			top: 0;
+		}
+		&::after {
+			transform: rotate(-45deg);
+			top: 0;
+		}
 	}
 }
 
