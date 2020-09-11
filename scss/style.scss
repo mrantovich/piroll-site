@@ -33,6 +33,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	height: 100px;
+	position: relative;
 	@media (max-width: 992px) {
 		justify-content: center;
 	}
@@ -44,13 +45,21 @@ header {
 	}
 
 	&__nav {
+		@media (max-width: 767px) {
+			width: 100%;
+
+		}
 	}
 }
 
 .nav {
+	
 
 	&__list {
 		display: flex;
+		@media (max-width: 767px) {
+			display: none;
+		}
 	}
 
 	&__item {
@@ -70,6 +79,48 @@ header {
 		&:hover {
 			color: $color-primary;
 		}
+	}
+
+	&__burger {
+		position: absolute;
+		top: 32px;;
+		right: 0;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		transition: 0.3s;
+		opacity: 0;
+		visibility: hidden;
+		@media (max-width: 767px) {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.burger {
+	& span {
+		position: absolute;
+		top: calc(50% - 2px);
+		left: 0;
+		width: 40px;
+		height: 2px;
+		background-color: #191919;
+	}
+	& span::before,
+	& span::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 40px;
+		height: 2px;
+		background-color: #191919;
+	}
+	& span::before {
+		top: calc(50% - 10px);
+	}
+	& span::after {
+		top: calc(50% + 8px);
 	}
 }
 

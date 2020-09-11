@@ -102,6 +102,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 100px;
+  position: relative;
 }
 
 @media (max-width: 992px) {
@@ -116,8 +117,20 @@ header {
   }
 }
 
+@media (max-width: 767px) {
+  .header__nav {
+    width: 100%;
+  }
+}
+
 .nav__list {
   display: flex;
+}
+
+@media (max-width: 767px) {
+  .nav__list {
+    display: none;
+  }
 }
 
 .nav__item {
@@ -139,6 +152,52 @@ header {
 
 .nav__link:hover {
   color: #10c9c3;
+}
+
+.nav__burger {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+  .nav__burger {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.burger span {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #191919;
+}
+
+.burger span::before,
+.burger span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #191919;
+}
+
+.burger span::before {
+  top: calc(50% - 10px);
+}
+
+.burger span::after {
+  top: calc(50% + 8px);
 }
 
 .main {
