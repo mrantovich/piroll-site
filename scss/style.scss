@@ -213,6 +213,54 @@ header {
 	}
 }
 
+.skills {
+
+	display: flex;
+	background-color: #f8f9f9;
+
+	&__left-column {
+		flex-basis: 50%;
+	}
+
+	&__box {
+		margin: 164px 0 164px 100px;
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__progress {
+	}
+
+	&__progress-item {
+		margin-bottom: 40px;
+		font-size: 12px;
+		font-weight: 500;
+		letter-spacing: 1.2px;
+		color: #000;
+		text-transform: uppercase;
+
+		&_ux {
+		}
+
+		&_web {
+		}
+
+		&_marketing {
+		}
+	}
+
+	&__right-column {
+		flex-basis: 50%;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__bg {
+	}
+}
+
 .title {
 	color: #1d1d1d;
 	font-size: 30px;

@@ -301,6 +301,38 @@ header {
   margin-bottom: 37px;
 }
 
+.skills {
+  display: flex;
+  background-color: #f8f9f9;
+}
+
+.skills__left-column {
+  flex-basis: 50%;
+}
+
+.skills__box {
+  margin: 164px 0 164px 100px;
+}
+
+.skills__title {
+  margin-bottom: 40px;
+}
+
+.skills__progress-item {
+  margin-bottom: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.skills__right-column {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .title {
   color: #1d1d1d;
   font-size: 30px;
