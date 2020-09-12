@@ -265,11 +265,53 @@ header {
   }
 }
 
+.signature {
+  background-color: #fff;
+  padding: 100px 0;
+}
+
+@media (max-width: 767px) {
+  .signature {
+    padding: 80px 20px;
+  }
+}
+
+.signature__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signature__title {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .signature__title {
+    margin-bottom: 20px;
+  }
+}
+
+.signature__container {
+  max-width: 620px;
+}
+
+.signature__text {
+  margin-bottom: 37px;
+}
+
 .title {
   color: #1d1d1d;
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0.3px;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 24px;
+  }
 }
 
 .title_big {
@@ -290,9 +332,11 @@ header {
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.08px;
+  text-align: center;
 }
 
 .text_large {
+  text-align: left;
   font-size: 18px;
   letter-spacing: 0.09px;
 }
