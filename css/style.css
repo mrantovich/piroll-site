@@ -521,6 +521,10 @@ header {
   letter-spacing: 1.2px;
 }
 
+.works {
+  transition: 0.3s;
+}
+
 .works__box {
   display: grid;
   grid-template: 1fr 1fr/repeat(4, 1fr);
@@ -550,6 +554,12 @@ header {
   justify-content: center;
   padding: 46px 0;
   background-color: #f5f5f5;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.works__more:hover {
+  background-color: #ebebeb;
 }
 
 .works__more span {
@@ -557,6 +567,46 @@ header {
   color: #8e8e8e;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+}
+
+.process {
+  padding: 100px 0;
+}
+
+@media (max-width: 767px) {
+  .process {
+    padding: 80px 20px;
+  }
+}
+
+.process__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.process__title {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .process__title {
+    margin-bottom: 20px;
+  }
+}
+
+.process__container {
+  max-width: 500px;
+}
+
+.process__text {
+  margin-bottom: 55px;
+}
+
+.process__video {
+  max-width: 100%;
+  height: auto;
 }
 
 .title {
