@@ -672,6 +672,50 @@ header {
   letter-spacing: 0.08px;
 }
 
+.text-slider {
+  padding: 100px 0;
+  background-color: #10c9c3;
+}
+
+.text-slider__box {
+  max-width: 810px;
+  height: 170px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.text-slider__items {
+  height: 170px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.text-slider__item {
+  color: #fff;
+  width: 810px;
+  text-align: center;
+  border: 1px solid blue;
+}
+
+.text-slider__text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0.24px;
+  margin-bottom: 35px;
+}
+
+.text-slider__name {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 .title {
   color: #1d1d1d;
   font-size: 30px;
