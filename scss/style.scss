@@ -1,6 +1,7 @@
 @import 'nullstyle';
 @import 'fonts';
 @import 'colors';
+@import 'variables';
 
 html, body {
 	font-family: $font-main;
@@ -534,39 +535,76 @@ header {
 
 	padding: 100px 0;
 	background-color: $color-primary;
+	@media (max-width: 767px) {
+		padding: 80px 0;
+	}
 
 	&__box {
-		max-width: 810px;
-		height: 170px;
+		width: $slider-width;
+		height: $slider-height;
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
 		margin-bottom: 110px;
+		@media (max-width: 992px) {
+			width: $slider-width-less;
+			height: $slider-height-less;
+			margin-bottom: 80px;
+		}
+		@media (max-width: 767px) {
+			width: $slider-width-min;
+			height: $slider-height-min;
+			margin-bottom: 80px;
+		}
 	}
 
 	&__items {
-		height: 170px;
+		height: $slider-height;
 		position: absolute;
 		top: 0;
 		left: 0;
 		display: flex;
 		flex-wrap: nowrap;
 		transition: 0.5s ease-out;
+		@media (max-width: 992px) {
+			height: $slider-height-less;
+		}
+		@media (max-width: 767px) {
+			height: $slider-height-min;
+		}
 
 		&.first-is-active {
 			left: 0;
 		}
 		&.second-is-active {
-			left: -810px;
+			left: -$slider-width;
+			@media (max-width: 992px) {
+				left: -$slider-width-less;
+			}
+			@media (max-width: 767px) {
+				left: -$slider-width-min;
+			}
 		}
 		&.third-is-active {
-			left: -1620px;
+			left: -$slider-width * 2;
+			@media (max-width: 992px) {
+				left: -$slider-width-less * 2;
+			}
+			@media (max-width: 767px) {
+				left: -$slider-width-min * 2;
+			}
 		}
 	}
 	&__item {
 		color: #fff;
-		width: 810px;
+		width: $slider-width;
 		text-align: center;
+		@media (max-width: 992px) {
+			width: $slider-width-less;
+		}
+		@media (max-width: 767px) {
+			width: $slider-width-min;
+		}
 
 		&_first {
 		}
@@ -582,6 +620,10 @@ header {
 		line-height: 36px;
 		letter-spacing: 0.24px;
 		margin-bottom: 35px;
+		@media (max-width: 767px) {
+			font-size: 16px;
+			margin-bottom: 45px;
+		}
 	}
 
 	&__name {
