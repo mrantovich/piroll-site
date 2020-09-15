@@ -785,6 +785,71 @@ input:focus {
 	box-shadow: 0 0 6px #aaa;
 }
 
+footer {
+	background-color: #141414;
+	min-height: 284px;
+}
+
+.footer {
+	color: #bcbcbc;
+
+		&__box {
+			display: flex;
+		}
+
+		&__left-part {
+			flex-basis: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__right-part {
+			flex-basis: 50%;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__piroll {
+		}
+
+		&__inc {
+		}
+
+		&__copy {
+		}
+
+		&__contact {
+		}
+
+		&__email {
+		}
+
+		&__phone {
+		}
+
+		&__menu {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__links {
+
+		}
+
+		&__list {
+			& ul {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+
+		&__links-social {
+		}
+}
+
+
 
 .title {
 	color: #1d1d1d;

@@ -975,6 +975,43 @@ input:focus {
   box-shadow: 0 0 6px #aaa;
 }
 
+footer {
+  background-color: #141414;
+  min-height: 284px;
+}
+
+.footer {
+  color: #bcbcbc;
+}
+
+.footer__box {
+  display: flex;
+}
+
+.footer__left-part {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__right-part {
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__list ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .title {
   color: #1d1d1d;
   font-size: 30px;
