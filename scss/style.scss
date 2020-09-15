@@ -692,6 +692,98 @@ header {
 	}
 }
 
+.send {
+	background-color: #f5f5f5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 100px 0;
+	@media (max-width: 767px) {
+		padding: 80px 20px;
+	}
+
+	&__title {
+		margin-bottom: 35px;
+	}
+
+	&__container {
+		max-width: 540px;
+	}
+
+	&__text {
+		margin-bottom: 40px;
+	}
+
+	&__form {
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 670px;
+	@media (max-width: 767px) {
+		width: 420px;
+	}
+	@media (max-width: 445px) {
+		width: 290px;
+	}
+
+	&__first-line {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+
+	&__text-field {
+		height: 48px;
+		width: 100%;
+	}
+
+	&__name {
+		margin-right: 30px;
+		@media (max-width: 767px) {
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__email {
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__textarea {
+		height: 170px;
+		margin-bottom: 30px;
+	}
+
+	&__button {
+		width: 188px;
+		margin: 0 auto;
+		padding: 22px 35px;
+	}
+}
+
+input {
+	transition: 0.4s;
+}
+input::placeholder {
+	font-family: $font-secondary, sans-serif;
+	font-size: 15px;
+	color: #787878;
+	letter-spacing: 0.07px;
+	padding-left: 20px;
+}
+input:focus {
+	box-shadow: 0 0 6px #aaa;
+}
 
 
 .title {
