@@ -541,7 +541,7 @@ header {
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
-		border: 1px solid red;
+		margin-bottom: 110px;
 	}
 
 	&__items {
@@ -550,12 +550,23 @@ header {
 		top: 0;
 		left: 0;
 		display: flex;
+		flex-wrap: nowrap;
+		transition: 0.5s ease-out;
+
+		&.first-is-active {
+			left: 0;
+		}
+		&.second-is-active {
+			left: -810px;
+		}
+		&.third-is-active {
+			left: -1620px;
+		}
 	}
 	&__item {
 		color: #fff;
 		width: 810px;
 		text-align: center;
-		border: 1px solid blue;
 
 		&_first {
 		}
@@ -581,11 +592,26 @@ header {
 	}
 
 	&__dots {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 50px;
+		height: 15px;
+		margin: 0 auto;
 	}
 
 	&__dot {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		background-color: #fff;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: 0.3s;
 
 		&_active {
+			width: 10px;
+			height: 10px;
 		}
 	}
 }
