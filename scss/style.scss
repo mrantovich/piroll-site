@@ -786,67 +786,104 @@ input:focus {
 }
 
 footer {
+	font-family: $font-secondary, sans-serif;
+	color: #bcbcbc;
 	background-color: #141414;
-	min-height: 284px;
 }
 
 .footer {
-	color: #bcbcbc;
 
-		&__box {
-			display: flex;
+	padding: 100px 0;
+
+	&__box {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-grow: 1;
+	}
+
+	&__flex {
+		flex-grow: 1;
+		flex-basis: 50%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__piroll {
+		width: 225px;
+	}
+
+	&__inc {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 500;
+		letter-spacing: 0.18px;
+		margin-bottom: 25px;
+	}
+
+	&__copy {
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0.07px;
+	}
+
+	&__contact {
+		font-size: 15px;
+		font-weight: 400;
+	}
+
+	&__email {
+		margin-bottom: 10px;
+	}
+	&__phone {
+		font-family: $font-res;
+		letter-spacing: 0.07px;
+	}
+
+	&__flex-right {
+		flex-basis: 50%;
+	}
+
+	&__grid {
+		padding-left: 30px;
+		display: grid;
+		grid-template: 1fr / repeat(5, 1fr);
+	}
+
+	&__grid-item {
+		width: 100px;
+		grid-row: 1 / 2;
+		&_menu-list-one {
+			grid-column: 2 / 3;
 		}
-
-		&__left-part {
-			flex-basis: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		&_menu-list-two {
+			grid-column: 3 / 4;
 		}
-
-		&__right-part {
-			flex-basis: 50%;
-			align-items: center;
-			justify-content: space-between;
+		&_menu-list-social {
+			grid-column: 5 / 6;
 		}
+	}
 
-		&__piroll {
+	&__list {
+		& li {
+			font-size: 15px;
+			font-weight: 400;
+			letter-spacing: 0.07px;
+			line-height: 24px;
 		}
+	}
 
-		&__inc {
+	&__link {
+		color: #bcbcbc;
+		text-decoration: none;
+		transition: 0.2s;
+		&:hover {
+			text-decoration: underline;
+			color: #fff;
 		}
-
-		&__copy {
-		}
-
-		&__contact {
-		}
-
-		&__email {
-		}
-
-		&__phone {
-		}
-
-		&__menu {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		&__links {
-
-		}
-
-		&__list {
-			& ul {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-			}
-		}
-
-		&__links-social {
-		}
+	}
 }
 
 
