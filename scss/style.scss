@@ -7,6 +7,12 @@ html, body {
 	font-family: $font-main;
 }
 
+body {
+	&._locked {
+		position: fixed;
+	}
+}
+
 .wrapper {
 	width: 100%;
 }
@@ -40,8 +46,17 @@ header {
 	}
 
 	&__logo {
+		transition: 0.3s;
+		position: relative;
+		z-index: 3;
 		@media (max-width: 992px) {
-			display: none;
+			opacity: 0;
+			visibility: hidden;
+			&._active {
+				opacity: 1;
+				visibility: visible;
+				filter: invert(1);
+			}
 		}
 	}
 
@@ -58,8 +73,26 @@ header {
 
 	&__list {
 		display: flex;
+		transition: 0.3s;
 		@media (max-width: 767px) {
-			display: none;
+			background-color: $color-primary;
+			flex-direction: column;
+			width: 100vw;
+			position: absolute;
+			top: 0;
+			left: -30px;
+			height: 100vh;
+			align-items: center;
+			justify-content: space-between;
+			padding: 30px 0;
+			overflow: scroll;
+			opacity: 0;
+			visibility: hidden;
+			&._active {
+				opacity: 1;
+				visibility: visible;
+				
+			}
 		}
 	}
 
@@ -67,6 +100,9 @@ header {
 		margin-left: 28px;
 		&:first-child {
 			margin-left: 0;
+		}
+		@media (max-width: 767px) {
+			margin: 0;
 		}
 	}
 
@@ -79,6 +115,10 @@ header {
 		transition: 0.3s;
 		&:hover {
 			color: $color-primary;
+		}
+		@media (max-width: 767px) {
+			color: #fff;
+			font-size: 24px;
 		}
 	}
 
@@ -128,13 +168,17 @@ header {
 
 	&._active span {
 		width: 0;
+		&::before,
+		&::after {
+			background-color: #fff;
+			top: 0;
+		}
 		&::before {
 			transform: rotate(45deg);
-			top: 0;
 		}
 		&::after {
 			transform: rotate(-45deg);
-			top: 0;
+			
 		}
 	}
 }

@@ -73,6 +73,10 @@ html, body {
   font-family: "Montserrat", sans-serif;
 }
 
+body._locked {
+  position: fixed;
+}
+
 .wrapper {
   width: 100%;
 }
@@ -111,9 +115,21 @@ header {
   }
 }
 
+.header__logo {
+  transition: 0.3s;
+  position: relative;
+  z-index: 3;
+}
+
 @media (max-width: 992px) {
   .header__logo {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header__logo._active {
+    opacity: 1;
+    visibility: visible;
+    filter: invert(1);
   }
 }
 
@@ -125,11 +141,28 @@ header {
 
 .nav__list {
   display: flex;
+  transition: 0.3s;
 }
 
 @media (max-width: 767px) {
   .nav__list {
-    display: none;
+    background-color: #10c9c3;
+    flex-direction: column;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    overflow: scroll;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .nav__list._active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -139,6 +172,12 @@ header {
 
 .nav__item:first-child {
   margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  .nav__item {
+    margin: 0;
+  }
 }
 
 .nav__link {
@@ -152,6 +191,13 @@ header {
 
 .nav__link:hover {
   color: #10c9c3;
+}
+
+@media (max-width: 767px) {
+  .nav__link {
+    color: #fff;
+    font-size: 24px;
+  }
 }
 
 .nav__burger {
@@ -206,14 +252,17 @@ header {
   width: 0;
 }
 
+.burger._active span::before, .burger._active span::after {
+  background-color: #fff;
+  top: 0;
+}
+
 .burger._active span::before {
   transform: rotate(45deg);
-  top: 0;
 }
 
 .burger._active span::after {
   transform: rotate(-45deg);
-  top: 0;
 }
 
 .main {
