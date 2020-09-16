@@ -985,6 +985,12 @@ footer {
   padding: 100px 0;
 }
 
+@media (max-width: 767px) {
+  .footer {
+    padding: 80px 10px;
+  }
+}
+
 .footer__box {
   height: 100%;
   display: flex;
@@ -1102,6 +1108,12 @@ footer {
   .footer__grid-item {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__grid-item {
+    width: 90px;
   }
 }
 
