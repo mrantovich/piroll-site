@@ -5,7 +5,6 @@ $(document).ready(function(){
 	$('.burger').on('click', function() {
 		$(this).toggleClass('_active');
 		$('.nav__list, .header__logo').toggleClass('_active');
-		$('body').toggleClass('_locked');
 	});
 
 	$('.works__more').on('click', function() {

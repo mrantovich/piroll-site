@@ -73,10 +73,6 @@ html, body {
   font-family: "Montserrat", sans-serif;
 }
 
-body._locked {
-  position: fixed;
-}
-
 .wrapper {
   width: 100%;
 }
@@ -149,14 +145,13 @@ header {
     background-color: #10c9c3;
     flex-direction: column;
     width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: -30px;
-    height: 100vh;
     align-items: center;
     justify-content: space-between;
     padding: 30px 0;
-    overflow: scroll;
     opacity: 0;
     visibility: hidden;
   }
