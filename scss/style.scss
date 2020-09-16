@@ -7,6 +7,16 @@ html, body {
 	font-family: $font-main;
 }
 
+body {
+	@media (max-width: 767px) {
+		&._locked {
+			height: 100%;
+			margin: 0;
+			overflow: hidden;
+		}
+	}
+}
+
 
 .wrapper {
 	width: 100%;
@@ -23,11 +33,10 @@ html, body {
 }
 
 header {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-
 }
 
 .header {
@@ -119,7 +128,7 @@ header {
 	&__burger {
 		position: absolute;
 		top: 32px;;
-		right: 0;
+		right: 32px;
 		width: 40px;
 		height: 40px;
 		cursor: pointer;
@@ -295,6 +304,13 @@ header {
 		text-transform: uppercase;
 		margin-bottom: 60px;
 		position: relative;
+
+		@media (max-width: 767px) {
+			&._burger-is-active {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
 
 		&:last-child {
 			margin-bottom: 0;

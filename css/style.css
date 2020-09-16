@@ -73,6 +73,14 @@ html, body {
   font-family: "Montserrat", sans-serif;
 }
 
+@media (max-width: 767px) {
+  body._locked {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
 .wrapper {
   width: 100%;
 }
@@ -91,7 +99,7 @@ html, body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -198,7 +206,7 @@ header {
 .nav__burger {
   position: absolute;
   top: 32px;
-  right: 0;
+  right: 32px;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -397,6 +405,13 @@ header {
   text-transform: uppercase;
   margin-bottom: 60px;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .skills__progress-item._burger-is-active {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .skills__progress-item:last-child {
