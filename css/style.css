@@ -73,6 +73,14 @@ html, body {
   font-family: "Montserrat", sans-serif;
 }
 
+@media (max-width: 767px) {
+  body._locked {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
 .wrapper {
   width: 100%;
 }
@@ -97,12 +105,19 @@ header {
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  header {
+    position: fixed;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 992px) {
@@ -111,9 +126,21 @@ header {
   }
 }
 
+.header__logo {
+  transition: 0.3s;
+  position: relative;
+  z-index: 3;
+}
+
 @media (max-width: 992px) {
   .header__logo {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header__logo._active {
+    opacity: 1;
+    visibility: visible;
+    filter: invert(1);
   }
 }
 
@@ -125,11 +152,27 @@ header {
 
 .nav__list {
   display: flex;
+  transition: 0.3s;
 }
 
 @media (max-width: 767px) {
   .nav__list {
-    display: none;
+    background-color: #10c9c3;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .nav__list._active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -139,6 +182,12 @@ header {
 
 .nav__item:first-child {
   margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  .nav__item {
+    margin: 0;
+  }
 }
 
 .nav__link {
@@ -154,14 +203,22 @@ header {
   color: #10c9c3;
 }
 
+@media (max-width: 767px) {
+  .nav__link {
+    color: #fff;
+    font-size: 24px;
+  }
+}
+
 .nav__burger {
   position: absolute;
   top: 32px;
-  right: 0;
+  right: 32px;
   width: 40px;
   height: 40px;
   cursor: pointer;
   transition: 0.3s;
+  z-index: 4;
   opacity: 0;
   visibility: hidden;
 }
@@ -206,14 +263,17 @@ header {
   width: 0;
 }
 
+.burger._active span::before, .burger._active span::after {
+  background-color: #fff;
+  top: 0;
+}
+
 .burger._active span::before {
   transform: rotate(45deg);
-  top: 0;
 }
 
 .burger._active span::after {
   transform: rotate(-45deg);
-  top: 0;
 }
 
 .main {
@@ -353,6 +413,13 @@ header {
   text-transform: uppercase;
   margin-bottom: 60px;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .skills__progress-item._burger-is-active {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .skills__progress-item:last-child {
@@ -690,6 +757,7 @@ header {
   position: relative;
   overflow: hidden;
   margin-bottom: 110px;
+  transition: 0.2s;
 }
 
 @media (max-width: 992px) {
@@ -705,6 +773,9 @@ header {
     width: 310px;
     height: 240px;
     margin-bottom: 80px;
+  }
+  .text-slider__box._burger-is-active {
+    z-index: -1;
   }
 }
 
