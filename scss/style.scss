@@ -33,10 +33,13 @@ body {
 }
 
 header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
+	@media (max-width: 767px) {
+		position: fixed;
+	}
 }
 
 .header {
@@ -46,6 +49,7 @@ header {
 	justify-content: space-between;
 	height: 100px;
 	position: relative;
+	z-index: 1;
 	@media (max-width: 992px) {
 		justify-content: center;
 	}
@@ -68,7 +72,6 @@ header {
 	&__nav {
 		@media (max-width: 767px) {
 			width: 100%;
-
 		}
 	}
 }
@@ -133,6 +136,7 @@ header {
 		height: 40px;
 		cursor: pointer;
 		transition: 0.3s;
+		z-index: 4;
 		opacity: 0;
 		visibility: hidden;
 		@media (max-width: 767px) {
@@ -600,6 +604,7 @@ header {
 		position: relative;
 		overflow: hidden;
 		margin-bottom: 110px;
+		transition: 0.2s;
 		@media (max-width: 992px) {
 			width: $slider-width-less;
 			height: $slider-height-less;
@@ -609,6 +614,9 @@ header {
 			width: $slider-width-min;
 			height: $slider-height-min;
 			margin-bottom: 80px;
+			&._burger-is-active {
+				z-index: -1;
+			}
 		}
 	}
 

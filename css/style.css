@@ -99,10 +99,16 @@ html, body {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  header {
+    position: fixed;
+  }
 }
 
 .header {
@@ -111,6 +117,7 @@ header {
   justify-content: space-between;
   height: 100px;
   position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 992px) {
@@ -211,6 +218,7 @@ header {
   height: 40px;
   cursor: pointer;
   transition: 0.3s;
+  z-index: 4;
   opacity: 0;
   visibility: hidden;
 }
@@ -749,6 +757,7 @@ header {
   position: relative;
   overflow: hidden;
   margin-bottom: 110px;
+  transition: 0.2s;
 }
 
 @media (max-width: 992px) {
@@ -764,6 +773,9 @@ header {
     width: 310px;
     height: 240px;
     margin-bottom: 80px;
+  }
+  .text-slider__box._burger-is-active {
+    z-index: -1;
   }
 }
 

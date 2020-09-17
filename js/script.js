@@ -6,7 +6,7 @@ $(document).ready(function(){
 		$(this).toggleClass('_active');
 		$('.nav__list, .header__logo').toggleClass('_active');
 		$('body').toggleClass('_locked');
-		$('.skills__progress-item').toggleClass('_burger-is-active');
+		$('.skills__progress-item, .text-slider__box').toggleClass('_burger-is-active');
 	});
 
 	$('.works__more').on('click', function() {
