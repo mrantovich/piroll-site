@@ -344,7 +344,7 @@ header {
 }
 
 .signature__title {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 @media (max-width: 767px) {
@@ -358,7 +358,8 @@ header {
 }
 
 .signature__text {
-  margin-bottom: 37px;
+  margin-bottom: 32px;
+  line-height: 26px;
 }
 
 .skills {
@@ -395,7 +396,7 @@ header {
 }
 
 .skills__title {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 @media (max-width: 767px) {
@@ -411,7 +412,7 @@ header {
   letter-spacing: 1.2px;
   color: #000;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 62px;
   position: relative;
 }
 
@@ -452,7 +453,7 @@ header {
 
 .skills__progress-item span {
   display: inline-block;
-  margin-left: 18px;
+  margin-left: 12px;
 }
 
 .skills__progress-item_ux::after {
@@ -573,7 +574,7 @@ header {
 
 .stats__item-number {
   font-size: 18px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   letter-spacing: 0.54px;
 }
 
@@ -654,7 +655,7 @@ header {
 }
 
 .process__title {
-  margin-bottom: 40px;
+  margin-bottom: 26px;
 }
 
 @media (max-width: 767px) {
@@ -674,6 +675,8 @@ header {
 .process__video {
   max-width: 100%;
   height: auto;
+  position: relative;
+  z-index: -1;
 }
 
 .trends {
@@ -728,7 +731,7 @@ header {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .trends__text {
@@ -958,7 +961,7 @@ header {
 }
 
 .send__title {
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 }
 
 .send__container {

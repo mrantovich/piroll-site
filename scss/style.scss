@@ -247,7 +247,7 @@ header {
 	}
 
 	&__title {
-		margin-bottom: 40px;
+		margin-bottom: 28px;
 		@media (max-width: 767px) {
 			margin-bottom: 20px;
 		}
@@ -258,7 +258,8 @@ header {
 	}
 
 	&__text {
-		margin-bottom: 37px;
+		margin-bottom: 32px;
+		line-height: 26px;
 	}
 
 	&__pic {
@@ -290,7 +291,7 @@ header {
 	}
 
 	&__title {
-		margin-bottom: 40px;
+		margin-bottom: 36px;
 		@media (max-width: 767px) {
 			text-align: center;
 		}
@@ -306,7 +307,7 @@ header {
 		letter-spacing: 1.2px;
 		color: #000;
 		text-transform: uppercase;
-		margin-bottom: 60px;
+		margin-bottom: 62px;
 		position: relative;
 
 		@media (max-width: 767px) {
@@ -342,7 +343,7 @@ header {
 
 		& span {
 			display: inline-block;
-			margin-left: 18px;
+			margin-left: 12px;
 		}
 
 		&_ux {
@@ -447,7 +448,7 @@ header {
 
 	&__item-number {
 		font-size: 18px;
-		margin-bottom: 16px;
+		margin-bottom: 10px;
 		letter-spacing: 0.54px;
 		@media (max-width: 767px) {
 			margin-bottom: 10px;
@@ -518,7 +519,7 @@ header {
 	}
 
 	&__title {
-		margin-bottom: 40px;
+		margin-bottom: 26px;
 		@media (max-width: 767px) {
 			margin-bottom: 20px;
 		}
@@ -535,6 +536,8 @@ header {
 	&__video {
 		max-width: 100%;
 		height: auto;
+		position: relative;
+		z-index: -1;
 	}
 }
 
@@ -577,7 +580,7 @@ header {
 		font-weight: 500;
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
-		margin-bottom: 20px;
+		margin-bottom: 16px;
 	}
 
 	&__text {
@@ -766,7 +769,7 @@ header {
 	}
 
 	&__title {
-		margin-bottom: 35px;
+		margin-bottom: 27px;
 	}
 
 	&__container {
